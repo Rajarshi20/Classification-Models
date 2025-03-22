@@ -13,7 +13,7 @@ def data_collection_processing():
     sonar_data = pd.read_csv('sonar_data.csv', header = None)
     shape = sonar_data.shape #shape is a property; Return a tuple representing the dimensionality of the DataFrame.
     sonar_data.describe() #method that gives a statistical measure lkike count, mean, standard deviation
-    value = sonar_data[60].value_counts() #function that counts the values of the column
+    print(sonar_data[60].value_counts()) #function that counts the values of the column
     sonar_data.groupby(60).mean() # get the mean value for each column grouped by the target variable 
 
     #separate the features and target
